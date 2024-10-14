@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox Vibe - User Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Include shared header -->
+    <header class="bg-dark text-light">
+        <nav class="navbar navbar-expand-lg navbar-dark container py-3">
+            <a class="navbar-brand fw-bold" href="index.html">Vox Vibe</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="user-details.html">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-light text-center py-5">
+        <img src="image/salaar form prabhas.jpeg" class="rounded-circle mb-3" alt="User Avatar" width="150" height="150">
+        <h2 class="mb-1">Welcome, Salaar Devaradha</h2>
+        <p class="text-muted">Manage your profile information and settings below.</p>
+        <button class="btn btn-outline-primary">Upload New Photo</button>
+    </section>
+
+    <!-- User Profile Section -->
+    <section class="container py-5">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card border-0 shadow-lg mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Personal Information</h4>
+                        <form id="profileForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                    <input type="text" class="form-control" id="name" value="Salaar Devaradha" disabled>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                    <input type="email" class="form-control" id="email" value="SalaarDevaradha@gmail.com" disabled>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-phone"></i></span>
+                                    <input type="text" class="form-control" id="phone" value="+1234567890" disabled>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary" id="editProfileBtn">Edit Profile</button>
+                            <button type="submit" class="btn btn-success d-none" id="saveProfileBtn">Save Changes</button>
+                            <button type="button" class="btn btn-secondary d-none" id="cancelEditBtn">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-lg mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Change Password</h4>
+                        <form id="passwordForm">
+                            <div class="mb-3">
+                                <label for="currentPassword" class="form-label">Current Password</label>
+                                <input type="password" class="form-control" id="currentPassword" placeholder="Enter current password">
+                            </div>
+                            <div class="mb-3">
+                                <label for="newPassword" class="form-label">New Password</label>
+                                <input type="password" class="form-control" id="newPassword" placeholder="Enter new password">
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm new password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Update Password</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body">
+                        <h4 class="card-title">Shipping Address</h4>
+                        <form id="addressForm">
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="address" value="123 Main Street, City, Country" disabled>
+                            </div>
+                            <div class="mb-3">
+                                <label for="city" class="form-label">City</label>
+                                <input type="text" class="form-control" id="city" value="City" disabled>
+                            </div>
+                            <div class="mb-3">
+                                <label for="zip" class="form-label">Zip Code</label>
+                                <input type="text" class="form-control" id="zip" value="12345" disabled>
+                            </div>
+                            <button type="button" class="btn btn-primary" id="editAddressBtn">Edit Address</button>
+                            <button type="submit" class="btn btn-success d-none" id="saveAddressBtn">Save Address</button>
+                            <button type="button" class="btn btn-secondary d-none" id="cancelAddressBtn">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include shared footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 Vox Vibe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
